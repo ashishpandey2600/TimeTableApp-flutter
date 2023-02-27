@@ -11,9 +11,6 @@ class _GroupState extends State<Group> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("B11"),
-      ),
-
       body: SfPdfViewer.asset('assets/TB.pdf',
       enableDocumentLinkAnnotation: true,
       enableDoubleTapZooming: true,

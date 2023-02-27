@@ -11,9 +11,7 @@ class _AcademicState extends State<Academic> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Academic Calender"),
       
-      ),
       body:SfPdfViewer.asset('assets/AC.pdf',
       enableDoubleTapZooming: true,
       enableTextSelection: true,

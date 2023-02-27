@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:timetableapp_flutter/pages/group.dart';
 
 import 'academic.dart';
+import 'courseoutcome.dart';
 import 'mybatch.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,12 +16,46 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedItem = 0;
-  var _pagesData = [ MyBatch(),Group(), Academic()];
+  var _pagesData = [MyBatch(), Group(), Academic()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(
+        title: Text('6th Semester'),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              child: Container(
+                  child: CircleAvatar(),
+                  decoration: BoxDecoration(color: Colors.blue)),
+            ),
+            ListTile(
+              title: Text("Course Outcome"),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CourseOutcome()));
+              },
+            ),
+            ListTile(
+              title: Text("Acadamic Calender "),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Academic()));
+              },
+            ),
+            ListTile(
+              title: Text("BY time table"),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyBatch()));
+              },
+            ),
+          ],
+        ),
+      ),
       body: Center(
         child: _pagesData[_selectedItem],
       ),

@@ -13,28 +13,6 @@ class _MyBatchState extends State<MyBatch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-      appBar: AppBar(
-        title: Text("BY")
-        
-        
-      ),
-      
-      drawer: Drawer(child: ListView(
-        children: [
-          DrawerHeader(child: Text("6 Semester"),),
-          ListTile(
-            title: Text("Course Outcome"),
-            onTap: (){},
-          ),
-          ListTile(),
-          ListTile(),
-
-
-
-
-        ],
-      ),),
       body: Container(child:PhotoView(imageProvider: AssetImage('assets/B11.jpg'),
       ),
 
